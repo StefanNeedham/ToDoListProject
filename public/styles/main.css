@@ -1,0 +1,33 @@
+p {
+    width: 400px;
+}
+
+.fitScreen {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.listItem{
+    width: 400px;
+    height: 75px;
+}
+
+.textInput {
+    border: none;
+    outline: none;
+    width: 85%;
+}
+
+.textInput:focus {
+    border-bottom: 2px solid black;
+}
+
+.button {
+    width: 11%;
+}
+
+input:checked + span {
+    text-decoration: line-through;
+}

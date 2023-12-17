@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+
+<div class="d-flex align-items-center justify-content-center">
+    <p class="fs-3 mt-5 p-2 bg-primary text-center border border-primary rounded text-white">
+        <%= listHeader %>
+    </p>
+</div>
+<div class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center">
+    <div class="list-group">
+        <form action="<%= route %>" method="post">            
+            <% list.forEach((item, i) => { %>
+                <label class="list-group-item d-flex gap-3 listItem d-flex align-items-center">
+                    <input class="form-check-input flex-shrink-0" type="checkbox" value="">
+                    <span>
+                        <%= item %>
+                    </span>
+                </label>
+            <% }); %>
+        
+        
+            <label class="list-group-item d-flex gap-3 listItem d-flex align-items-center">
+                <input class="textInput form-text-input text-center p-3" name="newItem" type="text" value="" placeholder="New Item">
+                <button type="submit" class="button btn btn-primary rounded-circle"><i class="fa-solid fa-plus"></i></button>
+            </label>
+        </form>
+    </div>
+  </div>
+<%- include("partials/footer.ejs") %>
